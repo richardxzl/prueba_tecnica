@@ -1,0 +1,11 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+index:
+  path:     /index
+  defaults: { _controller: AppBundle:Default:index }
+
+insertar:
+  path:     /insertar/
+  defaults: { _controller: AppBundle:Default:insertar }

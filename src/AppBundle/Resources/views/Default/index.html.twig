@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<h1 class="text-center"> GuestBook </h1>
+	<div class="col-md-8 col-md-offset-2 panel panel-default">
+		{% for entity in entities %}
+				<p class="margen-p"><b> {{ entity.nombre }} </b> {{ ' - ' ~ entity.correo }} </p>
+			    <p> {{ entity.mensaje }} </p><hr>
+		{% endfor  %}
+		{% include('AppBundle:Default:new.html.twig') %}
+	</div>
+{% endblock %} 
